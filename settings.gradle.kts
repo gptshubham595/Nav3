@@ -25,6 +25,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Nav3"
+rootProject.name = "NavigationCompose"
 include(":app")
  

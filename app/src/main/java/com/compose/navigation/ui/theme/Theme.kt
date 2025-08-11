@@ -1,4 +1,4 @@
-package com.compose.nav3.ui.theme
+package com.compose.navigation.ui.theme
 
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme

@@ -1,4 +1,4 @@
-package com.compose.nav3
+package com.compose.navigation
 
 import org.junit.Test
 
