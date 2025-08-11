@@ -14,8 +14,9 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.compose.navigation.models.Dummy
-import com.compose.navigation.nav3.route.Routes
+import com.compose.navigation.nav2.route.Nav2Routes
 import com.compose.navigation.ui.theme.MyStoreTheme
+import kotlinx.serialization.json.Json
 
 @Composable
 fun Nav2FirstScreen(modifier: Modifier, navController: NavController?) {
@@ -27,13 +28,15 @@ fun Nav2FirstScreen(modifier: Modifier, navController: NavController?) {
         Text("First Screen Nav2")
         Spacer(Modifier.height(12.dp))
         Button(onClick = {
+            val dummyObject = Dummy(
+                name = "Dummy Data 1",
+                description = "This is a dummy data for testing",
+                price = 100.0,
+            )
+            val dummyJsonString = Json.encodeToString(dummyObject)
             navController?.navigate(
-                route = Routes.SecondScreenRoutes(
-                    1, Dummy(
-                        name = "Dummy Data 1",
-                        description = "This is a dummy data for testing",
-                        price = 100.0,
-                    )
+                route = Nav2Routes.SecondScreenNav2Routes(
+                    1, dummyJsonString
                 )
             )
         }) {

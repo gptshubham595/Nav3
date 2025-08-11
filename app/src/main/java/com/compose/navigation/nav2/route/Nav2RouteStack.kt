@@ -7,9 +7,10 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.toRoute
+import com.compose.navigation.models.Dummy
 import com.compose.navigation.nav2.screens.Nav2FirstScreen
 import com.compose.navigation.nav2.screens.Nav2SecondScreen
-import com.compose.navigation.nav3.route.Routes
+import kotlinx.serialization.json.Json
 
 @Composable
 fun Nav2Route(modifier: Modifier = Modifier) {
@@ -17,14 +18,15 @@ fun Nav2Route(modifier: Modifier = Modifier) {
     NavHost(
         modifier = modifier,
         navController = navController,
-        startDestination = Routes.FirstScreenRoutes.route,
+        startDestination = Nav2Routes.FirstScreenNav2Routes.route,
     ) {
-        composable(Routes.FirstScreenRoutes.route) {
+        composable(Nav2Routes.FirstScreenNav2Routes.route) {
             Nav2FirstScreen(modifier, navController)
         }
-        composable<Routes.SecondScreenRoutes> { it: NavBackStackEntry ->
-            val arg = it.toRoute<Routes.SecondScreenRoutes>()
-            Nav2SecondScreen(modifier, arg.id, arg.data, navController)
+        composable<Nav2Routes.SecondScreenNav2Routes> { it: NavBackStackEntry ->
+            val args = it.toRoute<Nav2Routes.SecondScreenNav2Routes>()
+            val dataObject = Json.decodeFromString<Dummy>(args.data)
+            Nav2SecondScreen(modifier, args.id, dataObject, navController)
         }
 
     }

@@ -24,7 +24,7 @@ fun Nav3SecondScreen(modifier: Modifier, id: Int, data: Dummy?, onClick: () -> U
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text("Second Screen $id ${data?.name}", style = MaterialTheme.typography.bodyLarge)
+        Text("Second Screen $id \n ${data?.name} \n ${data?.description}", style = MaterialTheme.typography.bodyLarge)
         Spacer(Modifier.height(12.dp))
         Button(onClick) {
             Text("Go back to First Screen", style = MaterialTheme.typography.bodyMedium)

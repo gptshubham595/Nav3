@@ -31,7 +31,7 @@ fun Nav2SecondScreen(
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Text(
-            "Second Screen $id ${data?.name}",
+            "Second Screen $id \n ${data?.name} \n ${data?.description}",
             style = MaterialTheme.typography.bodyLarge
         )
         Spacer(Modifier.height(12.dp))
