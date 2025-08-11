@@ -9,5 +9,5 @@ sealed class Nav2Routes(val route: String) {
     data object FirstScreenNav2Routes : Nav2Routes("first_screen_route")
 
     @Serializable
-    data class SecondScreenNav2Routes(val id: Int, val data: String) : Nav2Routes("second_screen_route/$id/${data}")
+    data class SecondScreenNav2Routes(val id: Int, val data: String) : Nav2Routes("second_screen_route")
 }

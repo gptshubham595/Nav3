@@ -14,8 +14,8 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             MyStoreTheme {
-                Nav3Route()
-//                Nav2Route()
+//                Nav3Route()
+                Nav2Route()
             }
         }
     }
