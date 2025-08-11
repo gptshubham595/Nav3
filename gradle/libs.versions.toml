@@ -13,6 +13,7 @@ lifecycleViewmodel = "1.0.0-SNAPSHOT"
 activityCompose = "1.10.1"
 composeBom = "2025.07.01"
 navigation3 = "1.0.0-alpha06"
+navigation2 = "2.8.5"
 material3 = "1.4.0-beta01"
 nav3Material = "1.0.0-SNAPSHOT"
 ksp = "2.1.20-2.0.0"
@@ -38,14 +39,19 @@ androidx-material3-windowsizeclass = { group = "androidx.compose.material3", nam
 androidx-material3-adaptive-layout = { group = "androidx.compose.material3.adaptive", name = "adaptive-layout", version.ref = "material3" }
 androidx-adaptive-layout = { group = "androidx.compose.material3.adaptive", name = "adaptive-layout" }
 androidx-lifecycle-viewmodel-navigation3 = { module = "androidx.lifecycle:lifecycle-viewmodel-navigation3", version.ref = "lifecycleViewmodel" }
+
 androidx-navigation3-runtime = { module = "androidx.navigation3:navigation3-runtime", version.ref = "navigation3" }
 androidx-navigation3-ui = { module = "androidx.navigation3:navigation3-ui", version.ref = "navigation3" }
+
+androidx-navigation2-compose = { module = "androidx.navigation:navigation-compose", version.ref = "navigation2" }
+
 hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
 hilt-compiler = { group = "com.google.dagger", name = "hilt-compiler", version.ref = "hilt" }
 kotlinx-serialization-core = { module = "org.jetbrains.kotlinx:kotlinx-serialization-core", version.ref = "kotlinxSerializationCore" }
 kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerializationCore" }
 androidx-material-icons-extended = { group = "androidx.compose.material", name = "material-icons-extended" }
 androidx-material3-navigation3 = { group = "androidx.compose.material3.adaptive", name = "adaptive-navigation3", version.ref = "nav3Material" }
+
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

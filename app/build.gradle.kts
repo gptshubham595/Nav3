@@ -6,11 +6,11 @@ plugins {
 }
 
 android {
-    namespace = "com.compose.nav3"
+    namespace = "com.compose.navigation"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.compose.nav3"
+        applicationId = "com.compose.navigation"
         minSdk = 24
         targetSdk = 36
         versionCode = 1
@@ -73,20 +73,14 @@ dependencies {
 
     implementation(libs.kotlinx.serialization.core)
     implementation(libs.kotlinx.serialization.json)
+
+    // nav3
     implementation(libs.androidx.navigation3.runtime)
     implementation(libs.androidx.navigation3.ui)
     implementation(libs.androidx.lifecycle.viewmodel.navigation3)
+
+    implementation(libs.androidx.navigation2.compose)
+
     implementation(libs.androidx.material.icons.extended)
-
-
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
-    androidTestImplementation(platform(libs.androidx.compose.bom))
-    androidTestImplementation(libs.androidx.ui.test.junit4)
-    debugImplementation(libs.androidx.ui.tooling)
-    debugImplementation(libs.androidx.ui.test.manifest)
-
-
 
 }
